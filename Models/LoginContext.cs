@@ -58,6 +58,11 @@ namespace jwt.Models
             return list1;
         }
 
+        internal List<Login> Authentifikasi(string namaUser, string password, object config)
+        {
+            throw new NotImplementedException();
+        }
+
         private string GenerateJwtToken(string namaUser, string peran, IConfiguration pConfig)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(pConfig["Jwt:key"]));
